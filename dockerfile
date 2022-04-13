@@ -1,0 +1,9 @@
+FROM mysql
+
+
+##ENV MYSQL_ALLOW_EMPTY_PASSWORD=trust
+##ENV MYSQL_RANDOM_ROOT_PASSWORD=true
+ENV MYSQL_ROOT_PASSWORD="arc12346"
+EXPOSE 33060/tcp
+ADD ./sql_scripts/* ./sql_scripts/
+WORKDIR /sql_scripts/
